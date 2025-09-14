@@ -1,0 +1,48 @@
+/* Fondo claro y tipografía y que sea en mayuscula*/
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: center;
+}
+
+/*que la cabezera use todo el ancho y sea de color verde*/
+header {
+    background-color: #256926;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/*que el pie de pagina use todo el ancho y sea de color verde*/
+footer {
+    background-color: #256926;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.site-header {
+    background-color: #256926;
+    color: white;
+    padding: 10px;
+    overflow: auto; /* para que el contenedor respete el alto del contenido flotado */
+}
+
+.logo {
+    float: left;         /* Manda el logo a la izquierda */
+    height: 80px;
+    margin-right: 15px;  /* Espacio entre logo y texto */
+}
+
+.site-header h1 {
+    line-height: 80px;   /* Centra el texto verticalmente respecto al logo */
+    margin: 0;
+    text-align: left;
+    
+}
