@@ -8,6 +8,12 @@ body {
     padding: 0;
     text-align: center;
 }
+h2 {
+    color: #256926;
+/* para que ste centrado */
+    text-align: center;
+    margin-top: 20px;
+}
 
 /*que la cabezera use todo el ancho y sea de color verde*/
 header {
@@ -44,5 +50,12 @@ footer {
     line-height: 80px;   /* Centra el texto verticalmente respecto al logo */
     margin: 0;
     text-align: left;
-    
 }
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #256926;
+    overflow: hidden;
+}
+
+/*para que el carrusel use toda la pagina*/
