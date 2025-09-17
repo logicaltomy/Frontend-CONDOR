@@ -1,90 +1,126 @@
-/* Fondo claro y tipografía y que sea en mayuscula*/
+/* Fondo claro y tipografía en mayúscula */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    text-transform: uppercase;
-    padding: 0;
-    text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Define la tipografía principal */
+  margin: 0; /* Elimina márgenes por defecto */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  padding: 0; /* Elimina el padding por defecto */
+  text-align: center; /* Centra el texto */
 }
+
+main {
+  padding-top: 120px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Define la tipografía principal */
+}
+
+
 h2 {
-    color: #256926;
-/* para que ste centrado */
-    text-align: center;
-    margin-top: 20px;
+  color: #256926; /* Color verde para los títulos h2 */
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Espaciado superior */
 }
 
-
-
-/*que la cabecera use todo el ancho y sea de color verde*/
+/* Cabecera verde fija arriba */
 .site-header {
-    background-color: #1e541e;
-    color: #e8e6e3;
-    position: fixed;
-    height: 80px;
-    width: 100%;
-    display: inline-flex; /*Se comporta como bloque para tomar el ancho*/
-    padding: 10px 20px; /*Ajusta el contenido (Espacio interno)*/
-    z-index: 99999; /*Eleva por capas. Es decir, superpone*/
-    box-shadow: 10px 5px 5px #0000006e;
+  background-color: #1e541e; /* Fondo verde oscuro */
+  position: fixed; /* Fija la cabecera en la parte superior */
+  height: 100px; /* Altura de la cabecera */
+  width: 100%; /* Ocupa todo el ancho */
+  display: flex; /* Usa flexbox para organizar los elementos */
+  justify-content: space-between; /* Espacia los elementos (logo a la izquierda, menú a la derecha) */
+  padding: 5px 20px; /* Espaciado interno */
+  z-index: 99999; /* Asegura que la cabecera esté sobre otros elementos */
+  box-shadow: 10px 5px 5px #0000006e; /* Sombra para dar profundidad */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
+/* Logo */
+.site-header .logo {
+  height: 80px; /* Altura del logo */
+  object-fit: contain; /* Ajusta el contenido sin deformarlo */
+  margin-right: 30px; /* Espaciado a la derecha */
+}
 
-    /* Estilo para el logo dentro de la cabecera */
-    .site-header .logo {
-        height: 80px; /* Define la altura del logo */
-        margin-right: 20px; /* Espacio a la derecha del logo */
-    }
+/* Barra de navegación */
+.site-header .navbar {
+  display: flex; /* Usa flexbox para organizar los enlaces */
+  font-size: 25px; /* Tamaño de fuente de los enlaces */
+  /*para que esten hacia la izquierda*/
+}
 
-    .site-header .logo {
-        height: 60px; /* Define la altura del logo */
-        margin-right: 20px; /* Espacio a la derecha del logo */
-    }
+/* Lista de navegación */
+.site-header .navbar ul {
+  display: flex; /* Flexbox para organizar los elementos de la lista */
+  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+  gap: 20px; /* Espaciado uniforme entre los elementos */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  align-items: center; /* Centra los elementos verticalmente */
+}
 
-    /* Estilo para la barra de navegación dentro de la cabecera */
-    .site-header .navbar {
-        display: flex; /* Usa flexbox para organizar los elementos */
-        align-items: center; /* Alinea los elementos verticalmente al centro */
-        gap: 15px; /* Espacio entre los elementos de la barra de navegación */
-        font-size: 24px; /* Tamaño de fuente de los elementos */
-        font-weight: bold; /* Hace que el texto sea negrita */
-    }
+/* Items de navegación */
+.site-header .navbar ul li {
+  list-style: none; /* Elimina los puntos de las listas */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #256926; /* Fondo verde */
+  text-align: center; /* Centra el texto */
+}
 
-    /* Estilo para los elementos de la lista dentro de la barra de navegación */
-    .site-header .navbar ul li {
-        list-style: none; /* Elimina los puntos o viñetas de la lista */
-        display: inline; /* Hace que los elementos se muestren en línea */
-        margin-right: 15px; /* Espacio a la derecha de cada elemento */
-    }
+/* Enlaces */
+.site-header .navbar ul li a {
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: background-color 0.3s; /* Transición suave para cambios de color */
+  padding: 5px 5px; /* Espaciado interno */;
+}
 
-    .site-header .navbar ul li a {
-        color: white;
-        text-decoration: none;
+/* Ícono de usuario */
+.user-icon-item {
+  background-color: transparent !important; /* Fondo transparente */
+  padding: 0 !important; /* Sin padding */
+  margin: 0 !important; /* Sin margen */
+}
 
-    }
+.user-icon { /* Sin espacio alrededor del ícono */
+  width: 60px; /* Ancho del ícono */
+  height: auto; /* Altura proporcional */
+  vertical-align: middle; /* Alineación vertical */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer */
 footer {
-    background-color: #256926;
-    color: white;
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+  background-color: #256926; /* Fondo verde */
+  color: white; /* Texto blanco */
+  padding: 10px 10px; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho */
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    height: auto; /* Altura automática */
+    padding: 10px; /* Ajusta el espaciado */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos */
+    gap: 10px; /* Reduce el espaciado entre elementos */
+  }
+
+  .navbar ul li {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Ancho máximo */
+  }
+
+  .user-icon {
+    width: 45px; /* Reduce el tamaño del ícono en dispositivos móviles */
+  }
 
 
+
+  footer {
+    position: static; /* Evita que el footer tape contenido en pantallas pequeñas */
+  }
+}
