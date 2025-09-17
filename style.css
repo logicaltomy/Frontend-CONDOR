@@ -2,7 +2,7 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
-    color: black;
+    color: rgb(255, 255, 255);
     margin: 0;
     text-transform: uppercase;
     padding: 0;
@@ -15,15 +15,68 @@ h2 {
     margin-top: 20px;
 }
 
-/*que la cabezera use todo el ancho y sea de color verde*/
-header {
-    background-color: #256926;
-    color: white;
-    padding: 10px 0;
+
+
+/*que la cabecera use todo el ancho y sea de color verde*/
+.site-header {
+    background-color: #1e541e;
+    color: #e8e6e3;
+    position: fixed;
+    height: 80px;
     width: 100%;
+    display: inline-flex; /*Se comporta como bloque para tomar el ancho*/
+    padding: 10px 20px; /*Ajusta el contenido (Espacio interno)*/
+    z-index: 99999; /*Eleva por capas. Es decir, superpone*/
+    box-shadow: 10px 5px 5px #0000006e;
 }
 
-/*que el pie de pagina use todo el ancho y sea de color verde*/
+
+    /* Estilo para el logo dentro de la cabecera */
+    .site-header .logo {
+        height: 80px; /* Define la altura del logo */
+        margin-right: 20px; /* Espacio a la derecha del logo */
+    }
+
+    .site-header .logo {
+        height: 60px; /* Define la altura del logo */
+        margin-right: 20px; /* Espacio a la derecha del logo */
+    }
+
+    /* Estilo para la barra de navegación dentro de la cabecera */
+    .site-header .navbar {
+        display: flex; /* Usa flexbox para organizar los elementos */
+        align-items: center; /* Alinea los elementos verticalmente al centro */
+        gap: 15px; /* Espacio entre los elementos de la barra de navegación */
+        font-size: 24px; /* Tamaño de fuente de los elementos */
+        font-weight: bold; /* Hace que el texto sea negrita */
+    }
+
+    /* Estilo para los elementos de la lista dentro de la barra de navegación */
+    .site-header .navbar ul li {
+        list-style: none; /* Elimina los puntos o viñetas de la lista */
+        display: inline; /* Hace que los elementos se muestren en línea */
+        margin-right: 15px; /* Espacio a la derecha de cada elemento */
+    }
+
+    .site-header .navbar ul li a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
     background-color: #256926;
     color: white;
@@ -33,29 +86,5 @@ footer {
     bottom: 0;
 }
 
-.site-header {
-    background-color: #256926;
-    color: white;
-    padding: 10px;
-    overflow: auto; /* para que el contenedor respete el alto del contenido flotado */
-}
 
-.logo {
-    float: left;         /* Manda el logo a la izquierda */
-    height: 80px;
-    margin-right: 15px;  /* Espacio entre logo y texto */
-}
 
-.site-header h1 {
-    line-height: 80px;   /* Centra el texto verticalmente respecto al logo */
-    margin: 0;
-    text-align: left;
-}
-
-/* Estilos para el menú de navegación */
-nav {
-    background-color: #256926;
-    overflow: hidden;
-}
-
-/*para que el carrusel use toda la pagina*/
