@@ -12,6 +12,17 @@ main {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Define la tipografía principal */
 }
 
+.carousel-img {
+  height: 700px; /* altura fija para el carrusel */
+  width: 1350px; /* ajusta el ancho al contenedor */
+  margin: 0 auto; /* centra la imagen */
+  display: block; /* asegura que la imagen se comporte como un bloque */
+  /*para que use todo el ancho*/
+  object-fit: cover; /* asegura que la imagen cubra el área sin distorsionarse */
+
+  border-radius: 15px; /* Bordes redondeados */
+}
+
 
 h2 {
   color: #256926; /* Color verde para los títulos h2 */
@@ -45,6 +56,8 @@ h2 {
   display: flex; /* Usa flexbox para organizar los enlaces */
   font-size: 25px; /* Tamaño de fuente de los enlaces */
   /*para que esten hacia la izquierda*/
+  align-items: center; /* Centra los elementos verticalmente */
+  
 }
 
 /* Lista de navegación */
@@ -55,6 +68,7 @@ h2 {
   margin: 0; /* Elimina el margen por defecto */
   padding: 0; /* Elimina el padding por defecto */
   align-items: center; /* Centra los elementos verticalmente */
+  gap: 50px;
 }
 
 /* Items de navegación */
@@ -64,6 +78,7 @@ h2 {
   border-radius: 10px; /* Bordes redondeados */
   background-color: #256926; /* Fondo verde */
   text-align: center; /* Centra el texto */
+  transition: background-color 0.3s; /* Transición suave para cambios de color */
 }
 
 /* Enlaces */
@@ -71,7 +86,7 @@ h2 {
   color: white; /* Texto blanco */
   text-decoration: none; /* Elimina el subrayado */
   transition: background-color 0.3s; /* Transición suave para cambios de color */
-  padding: 5px 5px; /* Espaciado interno */;
+  padding: 5px 5px; /* Espaciado interno */
 }
 
 /* Ícono de usuario */
@@ -85,7 +100,32 @@ h2 {
   width: 60px; /* Ancho del ícono */
   height: auto; /* Altura proporcional */
   vertical-align: middle; /* Alineación vertical */
+  margin-left: 150px;
 }
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.user-actions button {
+  font-size: 20px; /* Tamaño de letra más grande */
+  padding: 15px 30px; /* Espaciado interno uniforme */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #000; /* Borde negro uniforme */
+  width: 500px; /* Ancho uniforme para todos los botones */
+  text-align: center; /* Centra el texto */
+  margin-bottom: 15px; /* Espaciado entre botones */
+  transition: transform 0.2s, background-color 0.3s; /* Transición suave */
+}
+
+.user-actions button:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+  background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+}
+
 
 /* Footer */
 footer {
@@ -95,11 +135,6 @@ footer {
   width: 100%; /* Ocupa todo el ancho */
 }
 
-.carousel-item img{
-    width: 100%;    /*Ocupa todo el ancho*/
-    height: 400px;  /*Alto fijo del carrusel*/
-    object-fit: cover;  /*Recorta sin deformar*/
-}
 
 /* Responsividad */
 @media (max-width: 768px) {
