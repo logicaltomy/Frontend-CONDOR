@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('loginForm');
-  const usuario = document.getElementById('usuario');
+  const correo = document.getElementById('correo');
   const password = document.getElementById('password');
   const listInputs = document.querySelectorAll(".form-input");
 
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //El ! en vez de significar lo contrario, es comprobar si viene vacio
 
-    if (!usuario.value.trim()) {
-      mostrarError("usuario", "Por favor ingresa el usuario");
+    if (!correo.value.trim()) {
+      mostrarError("correo", "Por favor ingresa el correo");
       valido = false;
     }
 
@@ -26,15 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // simulamos login válido con usuario "admin" y pass "1234"
     if (valido) {
-    const usuarioRegistrado = localStorage.getItem("usuario");
+    const correoRegistrado = localStorage.getItem("correo");
     const passwordRegistrado = localStorage.getItem("password");
     
-    if (usuario.value === usuarioRegistrado && password.value === passwordRegistrado) {
+    if (correo.value === correoRegistrado && password.value === passwordRegistrado) {
        
         // redirigir a otra página
         window.location.href = "index.html";
       } else {
-        mostrarError("password", "Usuario o contraseña incorrectos");
+        mostrarError("password", "Correo o contraseña incorrectos");
       }
     }
   });

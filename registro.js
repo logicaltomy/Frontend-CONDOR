@@ -3,6 +3,8 @@
 var usuario = document.getElementById("usuario");
 var contraseña = document.getElementById("password")
 var confirmar = document.getElementById("confirmar")
+var correo = document.getElementById("correo");
+
 
 /*constantes, para ocupar en la validacion del fromulario*/
 const form = document.getElementById("form");
@@ -31,6 +33,11 @@ function validar(){
         todoOk = false;
     }
 
+    if(correo.value.trim() === "" || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(correo.value.trim())) {
+    mostrarMensajeError("correo", "Correo debe tener un formato válido (usuario@dominio.com)");
+    todoOk = false;
+    }
+
     if(contraseña.value.length > 20 || contraseña.value.length < 5 || contraseña.value.trim() == ""){
         mostrarMensajeError("password", "La contrasenia debe tener 5 o 20 caracteres")
         todoOk = false;
@@ -44,6 +51,7 @@ function validar(){
 
         localStorage.setItem("usuario", usuario.value);
         localStorage.setItem("password", contraseña.value);
+        localStorage.setItem("correo", correo.value);
 
         form.reset(); // Limpia todos los campos del formulario
         window.location.href = "login.html"
