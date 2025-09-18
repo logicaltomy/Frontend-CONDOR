@@ -1,0 +1,79 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #f2f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  background-image: url('img/fondofinal.jpeg'); /* ruta de tu imagen */
+  background-size: cover;      /* hace que la imagen cubra todo el body */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 100px;  /* ancho deseado */
+  height: auto;  /* mantiene la proporción original */
+}
+
+
+form {
+  background: #256926;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 320px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: rgb(81, 150, 81);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgb(81, 150, 81);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #1f5920;
+}
+
+/* mensajes de error */
+.mensajeError {
+  color: rgb(255, 72, 72);
+  font-size: 12px;
+  margin-bottom: 10px;
+  min-height: 14px; /* espacio reservado */
+}

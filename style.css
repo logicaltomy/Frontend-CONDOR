@@ -8,7 +8,7 @@ body {
 }
 
 main {
-  padding-top: 120px;
+  padding-top: 100px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Define la tipografía principal */
 }
 
@@ -93,6 +93,12 @@ footer {
   color: white; /* Texto blanco */
   padding: 10px 10px; /* Espaciado interno */
   width: 100%; /* Ocupa todo el ancho */
+}
+
+.carousel-item img{
+    width: 100%;    /*Ocupa todo el ancho*/
+    height: 400px;  /*Alto fijo del carrusel*/
+    object-fit: cover;  /*Recorta sin deformar*/
 }
 
 /* Responsividad */

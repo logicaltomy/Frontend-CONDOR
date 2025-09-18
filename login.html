@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="disenioLogin.css">
+</head>
+<body>
+   
+    <div>
+       <div style="float: left; margin-right: 20px;"> 
+        <img src="img/logonegro.png" alt="Logo CONDOR" class="logo">
+       </div>
+       <div>
+        <h1 style="color: black;">CONDOR</h1>
+       </div>
+        <form id="loginForm" novalidate style="margin-top: 50px;">
+    <h2>Iniciar Sesión</h2>
+
+    <div class="form-input usuario">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario">
+      <p class="mensajeError"></p>
+    </div>
+
+    <div class="form-input password">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password">
+      <p class="mensajeError"></p>
+    </div>
+
+    <button type="submit">Ingresar</button>
+  </form>
+  </div>
+
+  <script src="valid.js"></script>
+</body>
+</html>
