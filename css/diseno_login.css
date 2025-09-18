@@ -7,7 +7,7 @@ body {
   height: 100vh;
   margin: 0;
   color: white;
-  background-image: url('img/fondofinal.jpeg'); /* ruta de tu imagen */
+  background-image: url('fondo_final.jpeg'); /* ruta de tu imagen */
   background-size: cover;      /* hace que la imagen cubra todo el body */
   background-position: center; /* centra la imagen */
   background-repeat: no-repeat;
