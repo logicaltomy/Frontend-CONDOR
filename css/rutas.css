@@ -1,0 +1,68 @@
+/* Contenedor general de la lista */
+.rutas-wrap{
+  max-width: 980px;
+  margin: 2rem auto 5rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: 16px;
+}
+
+/* Tarjeta clickeable completa */
+.ruta-card{
+  display: grid;
+  grid-template-columns: 180px 1fr;   /* imagen a la izquierda, info a la derecha */
+  gap: 16px;
+  background: #fff;
+  border: 2px solid #2E7D32;          /* contorno */
+  border-radius: 16px;
+  text-decoration: none;               /* quitar subrayado */
+  color: inherit;
+  padding: 12px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.ruta-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+
+/* Imagen */
+.ruta-img{ overflow: hidden; border-radius: 12px; }
+.ruta-img img{
+  width: 100%; height: 100%;
+  max-height: 140px;
+  object-fit: cover; display: block;
+}
+
+/* Info */
+.ruta-info{ display: grid; gap: 6px; align-content: center; }
+.ruta-titulo{
+  margin: 0; letter-spacing: .5px;
+  font-weight: 800; font-size: 1.35rem;
+}
+.ruta-dif{ margin: 0; font-weight: 700; color:#333; }
+.ruta-stars{ margin: 0; color:#FF9800; font-size: 1.1rem; }
+.ruta-stars .nota{ color:#666; font-size:.95rem; margin-left:.35rem; }
+
+
+
+/* “Chips” de dificultad */
+.chip{
+  font-size: .8rem;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  background: #eef3ee; color:#1b5e20;
+}
+.chip--facil    { background:#e9f7ef; color:#1b5e20; }
+.chip--moderada { background:#fff8e1; color:#8d6e00; }
+.chip--dificil  { background:#ffebee; color:#b71c1c; }
+
+/* Responsive: en móvil, una columna */
+@media (max-width: 640px){
+  .ruta-card{ grid-template-columns: 110px 1fr; }
+}
+@media (max-width: 480px){
+  .ruta-card{ grid-template-columns: 1fr; }
+  .ruta-img img{ max-height: 220px; }
+  .ruta-info{ text-align: center; }
+  .ruta-stars{ justify-self: center; }
+}
