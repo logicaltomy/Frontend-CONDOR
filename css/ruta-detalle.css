@@ -1,0 +1,154 @@
+/* Hero con carrusel de fondo */
+.ruta-hero {
+    position: relative;
+    height: 48vh;            /* alto visible del carrusel */
+    min-height: 360px;       /* altura mínima del carrusel */
+    overflow: hidden;        /* oculta contenido que exceda el contenedor */
+}
+.ruta-hero .carousel-inner,
+.ruta-hero .carousel-item,
+.ruta-hero .carousel-item img {
+    height: 100%;            /* asegura que el carrusel ocupe toda la altura */
+}
+.ruta-hero .carousel-item img {
+    object-fit: cover;       /* ajusta la imagen para cubrir el contenedor */
+    filter: brightness(.85); /* oscurece ligeramente la imagen */
+}
+.hero-overlay {
+    position: absolute; inset: 0; /* cubre todo el carrusel */
+    background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.55) 100%);
+    pointer-events: none;         /* evita que interfiera con interacciones */
+}
+
+/* Contenido superpuesto */
+.ruta-content {
+    margin-top: -90px;      /* se monta sobre el hero */
+    margin-bottom: 4rem;    /* espacio inferior */
+    position: relative;
+    z-index: 2;             /* asegura que esté sobre el hero */
+}
+.btn-volver {
+    border-radius: 999px;   /* bordes completamente redondeados */
+    padding: .4rem .9rem;   /* espacio interno del botón */
+    box-shadow: 0 6px 18px rgba(0,0,0,.08); /* sombra del botón */
+    margin-left: .25rem;    /* espacio a la izquierda */
+    margin-bottom: .75rem;  /* espacio inferior */
+}
+
+/* Panel principal */
+.panel {
+    background: #fff;       /* fondo blanco */
+    border-radius: 18px;    /* bordes redondeados */
+    box-shadow: 0 20px 50px rgba(0,0,0,.12); /* sombra del panel */
+    padding: 1.2rem 1.4rem; /* espacio interno */
+}
+.panel-head {
+    color: #1f1f1f;         /* color del texto del encabezado */
+}
+.ruta-titulo {
+    margin: 0 0 .35rem 0;   /* margen inferior */
+    font-weight: 800;       /* texto en negrita */
+    letter-spacing: .3px;   /* espaciado entre letras */
+}
+.rating {
+    color: #FF9800;         /* color de las estrellas de calificación */
+    font-size: 1.15rem;     /* tamaño de las estrellas */
+}
+.rating .nota { 
+    color: #666;            /* color del texto de la nota */
+    margin-left: .35rem;    /* espacio a la izquierda */
+}
+
+/* Chips */
+.chips { 
+    display: flex;          /* disposición en fila */
+    gap: .5rem;             /* espacio entre chips */
+    margin-bottom: .25rem;  /* espacio inferior */
+    flex-wrap: wrap;        /* permite que los chips se ajusten en varias filas */
+}
+.chip {
+    font-size: .82rem;      /* tamaño del texto */
+    font-weight: 700;       /* texto en negrita */
+    padding: .25rem .6rem;  /* espacio interno */
+    border-radius: 999px;   /* bordes completamente redondeados */
+    background: #eef3ee;    /* color de fondo predeterminado */
+    color: #1b5e20;         /* color del texto predeterminado */
+}
+.chip--moderada { 
+    background: #fff8e1;    /* fondo para dificultad moderada */
+    color: #8d6e00;         /* texto para dificultad moderada */
+}
+.chip--facil { 
+    background: #e9f7ef;    /* fondo para dificultad fácil */
+    color: #1b5e20;         /* texto para dificultad fácil */
+}
+.chip--dificil { 
+    background: #ffebee;    /* fondo para dificultad difícil */
+    color: #b71c1c;         /* texto para dificultad difícil */
+}
+.chip--region { 
+    background: #e3f2fd;    /* fondo para región */
+    color: #0d47a1;         /* texto para región */
+}
+
+/* Meta */
+.panel-meta {
+    display: grid;          /* disposición en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); /* columnas adaptables */
+    gap: .5rem .9rem;       /* espacio entre elementos */
+    margin: .8rem 0 1rem 0; /* márgenes superior e inferior */
+    font-size: .98rem;      /* tamaño del texto */
+}
+.meta-item { 
+    color: #2b2b2b;         /* color del texto */
+}
+
+/* Descripción e info */
+.panel-desc p { 
+    margin: .25rem 0 0 0;   /* margen superior */
+    color: #333;            /* color del texto */
+    line-height: 1.55;      /* altura de línea */
+}
+.panel-info ul { 
+    margin: .25rem 0 0 1rem; /* margen izquierdo para listas */
+}
+
+/* CTA */
+.panel-cta { 
+    display: flex;          /* disposición en fila */
+    gap: .6rem;             /* espacio entre botones */
+    flex-wrap: wrap;        /* permite que los botones se ajusten en varias filas */
+    margin: .6rem 0 1.1rem; /* márgenes superior e inferior */
+}
+
+/* Footer */
+footer {
+  background-color: #256926; /* Fondo verde */
+  color: white; /* Texto blanco */
+  padding: 10px 10px; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .ruta-hero { 
+        height: 38vh;         /* altura del carrusel en pantallas medianas */
+        min-height: 260px;    /* altura mínima en pantallas medianas */
+    }
+    .ruta-content { 
+        margin-top: -70px;    /* ajuste del contenido superpuesto */
+    }
+}
+@media (max-width: 480px) {
+    .ruta-hero { 
+        height: 28vh;         /* altura del carrusel en pantallas pequeñas */
+        min-height: 180px;    /* altura mínima en pantallas pequeñas */
+    }
+    .ruta-content { 
+        margin-top: -50px;    /* ajuste del contenido superpuesto */
+        margin-bottom: 2rem;  /* espacio inferior reducido */
+    }
+    .panel-cta { 
+        flex-direction: column; /* botones en columna en pantallas pequeñas */
+    }
+}
