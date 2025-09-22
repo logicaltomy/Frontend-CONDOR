@@ -13,14 +13,12 @@ main {
 }
 
 .carousel-img {
-  height: 700px; /* altura fija para el carrusel */
+  height: 500px; /* altura fija para el carrusel */
   width: 1350px; /* ajusta el ancho al contenedor */
   margin: 0 auto; /* centra la imagen */
   display: block; /* asegura que la imagen se comporte como un bloque */
   /*para que use todo el ancho*/
   object-fit: cover; /* asegura que la imagen cubra el área sin distorsionarse */
-
-  border-radius: 15px; /* Bordes redondeados */
 }
 
 
