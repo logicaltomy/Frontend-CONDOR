@@ -139,6 +139,15 @@ footer {
     object-fit: cover;  /*Recorta sin deformar*/
 }
 
+.iframe {
+  display: block;
+  margin: 0 auto;         /* centra el mapa */
+  border-radius: 50px;    /* esquinas redondeadas */
+  border: 4px solid #3c8dbc; /* borde de color (azul de ejemplo) */
+  overflow: hidden;       /* asegura que el radio de borde recorte el contenido */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra suave */
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   .site-header {
