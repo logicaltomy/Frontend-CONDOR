@@ -133,6 +133,11 @@ footer {
   width: 100%; /* Ocupa todo el ancho */
 }
 
+.card-img-top{
+    width: 100%;    /*Ocupa todo el ancho*/
+    height: 200px;  /*Altura fija*/
+    object-fit: cover;  /*Recorta sin deformar*/
+}
 
 /* Responsividad */
 @media (max-width: 768px) {
